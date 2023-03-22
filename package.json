@@ -13,8 +13,8 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write --ignore-path .gitignore ."
+      "npm run format:fix",
+      "npm run lint"
     ]
   },
   "dependencies": {
