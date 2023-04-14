@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Gnb from "@/components/Gnb";
-import Snb from "@/components/Snb";
-import Header from "@/components/Header";
+import Gnb from "@/components/layout/Gnb";
+import Snb from "@/components/layout/Snb";
+import Header from "@/components/layout/Header";
 
 export default function App({ Component, pageProps }: AppProps) {
   //middleware로

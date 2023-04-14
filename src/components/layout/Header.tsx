@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import pages from "./pages";
+import Icon from "@/components/common/Icon";
 
 const Header = () => {
   const router = useRouter();
@@ -39,7 +40,11 @@ const Header = () => {
           <ul className="flex gap-gdsSpacing050">
             {currentPage.path?.map((path, index) => {
               if (currentPage.path && index !== currentPage.path.length - 1) {
-                return <li key={index}>{path} - </li>;
+                return (
+                  <li key={index} className="flex items-center">
+                    {path} <Icon size="gdsIconSizeSm" name="ChevronRightMD" />
+                  </li>
+                );
               } else {
                 return <li key={index}>{path}</li>;
               }
