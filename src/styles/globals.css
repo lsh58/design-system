@@ -1,3 +1,130 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Gotham rounded";
+  src: url(../../public/fonts/GothamRounded-Bold.otf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Gotham rounded";
+  src: url(../../public/fonts/GothamRounded-Medium.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gotham rounded";
+  src: url(../../public/fonts/GothamRounded-Light.otf);
+  font-weight: 400;
+}
+
+@layer base {
+  /* Typography Type - Display */
+  .gdsTypographyDisplay1 {
+    @apply text-gdsTypescale1000 font-gdsTypescaleWeightBold leading-[60px] tracking-[4px];
+  }
+  .gdsTypographyDisplay2 {
+    @apply text-gdsTypescale900 font-gdsTypescaleWeightBold leading-[52px] tracking-[4px];
+  }
+  .gdsTypographyDisplay3 {
+    @apply text-gdsTypescale800 font-gdsTypescaleWeightBold leading-[46px] tracking-[4px];
+  }
+
+  /* Typography Type - Heading */
+  .gdsTypographyHeading1 {
+    @apply text-gdsTypescale700 font-gdsTypescaleWeightBold leading-[42px] tracking-[4px];
+  }
+  .gdsTypographyHeading2 {
+    @apply text-gdsTypescale600 font-gdsTypescaleWeightBold leading-[36px] tracking-[4px];
+  }
+  .gdsTypographyHeading3 {
+    @apply text-gdsTypescale500 font-gdsTypescaleWeightBold leading-[30px] tracking-[4px];
+  }
+  .gdsTypographyHeading4 {
+    @apply text-gdsTypescale400 font-gdsTypescaleWeightBold leading-[26px] tracking-[4px];
+  }
+
+  /* Typography Type - Title */
+  .gdsTypographyTitle1 {
+    @apply text-gdsTypescale300 font-gdsTypescaleWeightBold leading-[28px];
+  }
+  .gdsTypographyTitle2 {
+    @apply text-gdsTypescale200 font-gdsTypescaleWeightBold leading-[24px];
+  }
+  .gdsTypographyTitle3 {
+    @apply text-gdsTypescale100 font-gdsTypescaleWeightBold leading-[22px];
+  }
+  .gdsTypographyTitle4 {
+    @apply text-gdsTypescale75 font-gdsTypescaleWeightBold leading-[20px];
+  }
+
+  /* Typography Type - Body */
+  .gdsTypographyBody1 {
+    @apply text-gdsTypescale200 font-gdsTypescaleWeightRegular leading-[28px];
+  }
+  .gdsTypographyBody2 {
+    @apply text-gdsTypescale100 font-gdsTypescaleWeightRegular leading-[24px];
+  }
+  .gdsTypographyBody3 {
+    @apply text-gdsTypescale75 font-gdsTypescaleWeightRegular leading-[22px];
+  }
+  .gdsTypographyBody4 {
+    @apply text-gdsTypescale60 font-gdsTypescaleWeightRegular leading-[20px];
+  }
+  .gdsTypographyBody5 {
+    @apply text-gdsTypescale50 font-gdsTypescaleWeightRegular leading-[18px];
+  }
+
+  /* Typography Type - Label */
+  .gdsTypographyLabel1 {
+    @apply text-gdsTypescale75 font-gdsTypescaleWeightSemibold leading-[24px];
+  }
+  .gdsTypographyLabel2 {
+    @apply text-gdsTypescale75 font-gdsTypescaleWeightSemibold leading-[22px];
+  }
+  .gdsTypographyLabel3 {
+    @apply text-gdsTypescale60 font-gdsTypescaleWeightSemibold leading-[20px];
+  }
+  .gdsTypographyLabel4 {
+    @apply text-gdsTypescale60 font-gdsTypescaleWeightSemibold leading-[18px];
+  }
+  .gdsTypographyLabel5 {
+    @apply text-gdsTypescale50 font-gdsTypescaleWeightSemibold leading-[16px];
+  }
+  .gdsTypographyLabel6 {
+    @apply text-gdsTypescale25 font-gdsTypescaleWeightSemibold leading-[14px];
+  }
+
+  /* Shadow */
+  .gdsElevationShadowSubtle {
+    box-shadow: 0px 14px 28px -7px rgba(0, 0, 0, 0.04);
+  }
+  .gdsElevationShadowNormal {
+    box-shadow: 0px 7px 14px -7px rgba(0, 0, 0, 0.04),
+      0px 28px 42px rgba(0, 0, 0, 0.04);
+  }
+  .gdsElevationShadowStrong {
+    box-shadow: 0px 7px 21px -7px rgba(0, 0, 0, 0.06),
+      0px 28px 56px rgba(0, 0, 0, 0.08);
+  }
+  .gdsElevationShadowHeavy {
+    box-shadow: 0px 210px 210px rgba(0, 0, 0, 0.08),
+      0px 112px 112px rgba(0, 0, 0, 0.04), 0px 56px 56px rgba(0, 0, 0, 0.04),
+      0px 42px 42px rgba(0, 0, 0, 0.02), 0px 7px 42px rgba(0, 0, 0, 0.02),
+      0px 7px 7px rgba(0, 0, 0, 0.02);
+  }
+
+  /* Standard (Baseline) icon size */
+  .gdsIconSizeLg {
+    @apply w-8 h-8;
+  }
+  .gdsIconSizeMd {
+    @apply w-6 h-6;
+  }
+  .gdsIconSizeSm {
+    @apply w-5 h-5;
+  }
+  .gdsIconSizeXs {
+    @apply w-4 h-4;
+  }
+}

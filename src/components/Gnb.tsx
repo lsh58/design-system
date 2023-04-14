@@ -2,16 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classNames from "classnames";
+import { useRouter } from "next/router";
+import pages from "./pages";
 
-const categories: Component.Category[] = [
-  { id: "overview", title: "Overview", link: "/overview" },
-  { id: "foundations", title: "Foundations", link: "/foundations/color" },
-  { id: "components", title: "Components", link: "/components" },
-  { id: "templates", title: "Templates", link: "/templates" },
-];
-
-const Gnb = (props: Component.Nav) => {
-  const { pathname } = props;
+const Gnb = () => {
+  const router = useRouter();
+  const pathname = router && router.pathname;
 
   const basePath = pathname && pathname.split("/")[1];
 
@@ -22,19 +18,17 @@ const Gnb = (props: Component.Nav) => {
         Design System
       </h1>
       <ul className="hidden gap-gdsSpacing800 sm:flex">
-        {categories.map((category) => (
+        {pages.map((page) => (
           <li
-            key={category.id}
+            key={page.id}
             className={classNames(
               "font-gdsTypescaleWeightBold transition duration-300 text-gdsLightColorTextAssistant text-gdsTypescale200 hover:text-gdsLightColorTextInteractive",
               {
-                "!text-gdsLightColorTextInteractive": basePath === category.id,
+                "!text-gdsLightColorTextInteractive": basePath === page.id,
               }
             )}
           >
-            {category.link && (
-              <Link href={category.link}>{category.title}</Link>
-            )}
+            {page.link && <Link href={page.link}>{page.title}</Link>}
           </li>
         ))}
       </ul>
